@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('signatures', 'Api\SignatureController')->only(['index', 'store', 'show']);
+
+Route::put('/signatures/{signature}/report', 'Api\ReportSignature@update');
