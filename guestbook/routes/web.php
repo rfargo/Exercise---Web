@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::resource('signatures', 'Api\SignatureController')->only(['index', 'store', 'show']);
+Route::get('/', 'SignatureController@index')->name('home');
 
-Route::put('/signatures/{signature}/report', 'Api\ReportSignature@update');
+Route::get('sign', 'SignatureController@create')->name('sign');
