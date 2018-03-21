@@ -11,6 +11,6 @@ class SignatureController extends Controller
     }
 
     public function create(){
-    	return view ('signature.sign');
+    	return view ('signatures.sign');
     }
 }
